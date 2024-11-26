@@ -1,0 +1,436 @@
+*{
+  margin: 0;
+  font-family:Signika Negative, arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+.desktop-restricted{
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .wrapper{
+    display: none;
+  }
+  .desktop-restricted {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    color: red;
+    margin-top: 200px;
+  }
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 0 12 0 12;
+	position: relative;
+	z-index: 10;
+  background-color: #000;
+	box-shadow: 0px 0px 20px #000000da;
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(43, 42, 42) 78.9%);
+  position: sticky;
+  top: 0;
+}
+
+.bi{
+  background: none;
+  border: none;
+  scale: 1.1;
+}
+
+.storename{
+  color: white;
+  width: 180px;
+  letter-spacing: 1;
+  cursor: default;
+  font-size: 18;
+}
+
+.map{
+  width:100%;
+  height:360px; 
+  border:0;
+}
+
+.map-div{
+  position: relative;
+}
+
+.info{
+  background: radial-gradient(circle at 10% 20%, #373737 0%, #020202 100.2%);
+  padding: 15px 10px 15px 10px;
+  color: white;
+  cursor: default;
+  line-height: 1.4;
+}
+
+.info .title{
+  font-weight: 700;
+  letter-spacing: 1.3;
+}
+
+.subtitle{
+  font-size: 15;
+  margin-bottom: 14;
+  letter-spacing: 1;
+}
+
+.proudcts-images{
+  background: radial-gradient(circle at -1% 57.5%, rgb(21, 118, 62) 0%, rgb(29, 197, 99) 90%);
+  padding: 0 20 0 20;
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+}
+
+.img-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 270;
+  position: absolute;
+  left: max(calc(200px * 8), 100%);
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  to{
+    left: -200px;
+  }
+}
+
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+.img-div p{
+  color: whitesmoke;
+  margin-top: 13;
+  letter-spacing: 1.5;
+  font-size: 20;
+  text-shadow: 1px 1px 4px rgb(18, 67, 36);
+}
+
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  border-radius: 20px;
+}
+
+.image{
+  height: 170px;
+  width: 136;
+  border-radius: 20px;
+  box-shadow: -5px -5px 10px rgb(44, 255, 132), 5px 5px 10px rgb(12, 74, 38) ;
+}
+
+.products-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20 0 10 0 ;
+  color: rgb(229, 235, 229);
+  font-size: 35px;
+}
+
+.wcutitle{
+  color: #EDF7F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.wcu{
+  background: radial-gradient(circle at 12.3% 19.3%, rgb(23, 148, 201) 0%, rgb(0, 113, 151) 100.2%);
+  padding: 35 0 35 0 ;
+}
+
+.freshness{
+  background: linear-gradient(to top, #0bc35e 0%, #3ecf4d 100%);
+  color: whitesmoke;
+  margin: 50 20 0 20;
+  padding: 20;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.87);
+}
+
+.wcu-info .title{
+  font-size: 30;
+  font-weight: bold;
+  letter-spacing: 1.2;
+  margin-bottom: 6;
+}
+
+.quality{
+  background: linear-gradient(109.6deg, rgb(199, 40, 231) 11.5%, rgb(158, 52, 223) 91.2%);
+  color: whitesmoke;
+  margin: 30 20 0 20;
+  padding: 20;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px rgb(255, 0, 255);
+}
+
+.affordable{
+  background: linear-gradient(109.6deg, rgb(239, 180, 43) 11.2%, rgb(255, 124, 0) 100.2%);
+  color: whitesmoke;
+  margin: 30 20 0 20;
+  padding: 20;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(255, 166, 0, 0.607);
+}
+
+.varity{
+  background: radial-gradient(circle at 10% 20%, rgb(221, 49, 49) 0%, rgb(119, 0, 0) 90%);
+  color: whitesmoke;
+  margin: 30 20 0 20;
+  padding: 20;
+  border-radius: 20px;
+  box-shadow: 0px 0px 13px red;
+}
+
+.hygine{
+  background: linear-gradient(to right, #50575a 0%, #686e72  100%);
+  color:  whitesmoke;
+  margin: 30 20 0 20;
+  padding: 20;
+  border-radius: 20px;
+  box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.543);
+}
+
+.contact{
+  background: radial-gradient(circle at 10% 20%, #373737 0%, #020202 100.2%);
+  padding: 10px 0 30px 0;
+}
+
+.contact-title{
+  color: whitesmoke;
+  margin: 14 0 25 23;
+  font-size: 25;
+  letter-spacing: 1;
+}
+
+.boxes{
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+  column-gap: 25px;
+  padding: 0 20 0 20;
+}
+
+.box{
+  color: whitesmoke;
+  background-color: #505c5c;
+  padding: 10;
+  border-radius: 10px;
+}
+
+.box:hover{
+  background-color: #37b34f;
+}
+
+.box .p1{
+  margin-bottom: 20px;
+}
+
+.box .p2{
+  margin-bottom: 5;
+}
+
+.email{
+  margin: 20;
+  background-color:#505c5c;
+  padding: 15;
+  border-radius: 10px;
+  transition: 0.15s;
+}
+
+.email:hover{
+  background-color: #37b34f;
+}
+
+.email .p1{
+  color: whitesmoke;
+  margin-bottom: 4;
+}
+
+.email .p2{
+  color: whitesmoke;
+  font-size: 25;
+}
+
+.email a{
+  color: #00000000;
+}
+
+.about-wrapper{
+  background: radial-gradient(circle at 10% 20%, #373737 0%, #020202 100.2%);
+  padding: 30;
+}
+
+.about-title{
+  color: rgb(248, 239, 239);
+  margin: 0 0 20;
+  font-size: 25;
+  letter-spacing: 1;
+}
+
+.about-info p{
+  color: rgb(189, 180, 180);
+  letter-spacing: 0.5;
+}
+
+.buttons {
+  position: relative;
+}
+
+
+.dropdown-menu {  
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: -3;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0px 20px rgb(0, 0, 0);
+  z-index: 1000;
+  width: 150px;
+  overflow: hidden;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px ;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu p{
+  color: rgb(247, 242, 242);
+  background-color: #0bc35e;
+  padding: 5 0 5 10;
+  
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+.bi {
+  position: relative;
+  z-index: 10;
+}
+
+/* animation part */
+
+.wcu-info div { 
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: all 0.3s ease-in-out;
+  filter: blur(8px); 
+}
+
+.wcu-info div.show { 
+  opacity: 1; 
+  transform: translateY(0); 
+  filter: blur(0px); 
+}
+
+.about-info{
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  filter: blur(5px);
+}
+
+.about-info.show {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.email {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+  filter: blur(10px);
+}
+
+.email.show-email { 
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.boxes {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+  filter: blur(10px);
+}
+
+.boxes.show-boxes { 
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.contact-title, .about-title {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.5s ease-in-out;
+  filter: blur(8px);
+}
+
+.contact-title.show-contact-title, 
+.about-title.show-about-title { 
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+
+
+
