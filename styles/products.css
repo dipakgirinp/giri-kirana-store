@@ -1,0 +1,194 @@
+*{
+  margin: 0;
+  font-family:Signika Negative, arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.desktop-restricted{
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .wrapper{
+    display: none;
+  }
+  .desktop-restricted {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    color: red;
+    margin-top: 200px;
+  }
+}
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 0 12 0 12;
+	position: relative;
+	z-index: 10;
+  background-color: #000;
+	box-shadow: 0px 0px 20px #000000da;
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(43, 42, 42) 78.9%);
+  position: sticky;
+  top: 0;
+}
+
+.bi{
+  background: none;
+  border: none;
+  scale: 1.1;
+}
+
+.buttons{
+  position: relative;
+}
+
+.wrapper2{
+  min-height:calc(100vh - 55px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-bottom:10;
+  background: radial-gradient(circle at -1% 57.5%, rgb(19, 109, 57) 0%, rgb(29, 197, 99) 90%);
+}
+
+
+.storename{
+  color: white;
+  letter-spacing: 1;
+  cursor: default;
+  font-size: 18;
+}
+
+.title{
+  font-size: 40px;
+  padding:30 0 0 14;
+  color: white;
+  letter-spacing: 1.6;
+  font-weight: 600;
+  margin-bottom: 40;
+}
+
+.image{
+  width: 120px;
+}
+
+.image img{
+  height: 100%; 
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.container{
+  height: 130px;
+  margin: 0 10 40 10;
+  background: radial-gradient(circle at 10% 20%, #373737 0%, #020202 100.2%);
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.735);
+  flex: 1;
+
+  transform: translateX(-100px); /* Initial position off-screen */
+  opacity: 0; /* Initially invisible */
+  animation: flyIn .8s ease-out forwards; /* Apply the fly-in animation */
+  filter: none;
+}
+
+.container .info{
+  padding: 13 10 10 15 ;
+  flex: 1;
+}
+
+.p1{
+  color: whitesmoke;
+  font-size: 34;
+  margin-bottom: 14;
+  letter-spacing: 1;
+}
+
+.p2{
+  color: rgb(132, 131, 130);
+  line-height: 1.3;
+}
+
+.v{
+  font-size: 30;
+}
+
+
+.dropdown-menu {  
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: -3;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0px 20px rgb(0, 0, 0);
+  z-index: 1000;
+  width: 150px;
+  overflow: hidden;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px ;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu p{
+  color: rgb(247, 242, 242);
+  background-color: #0bc35e;
+  padding: 5 0 5 10;
+  
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+/* animation  */
+
+@keyframes flyIn {
+  0% {
+    transform: translateX(-100px); /* Start off-screen to the left */
+    opacity: 0; /* Invisible at the start */
+    filter: blur(5px); /* Apply blur */
+  }
+  100% {
+    transform: translateX(0); /* End at original position */
+    opacity: 1; /* Fully visible */
+    filter: none;
+  }
+}
+
+.c1 {
+  animation-delay: 0.2s;
+}
+
+.c2 {
+  animation-delay: 0.3s;
+}
+
+.c3 {
+  animation-delay: 0.4s;
+}
+
+.c4 {
+  animation-delay: 0.5s;
+}
+
