@@ -301,7 +301,7 @@
 .boxes{
   display: grid;
   grid-template-columns: 1fr  1fr;
-  column-gap: 25px;
+  column-gap: 20px;
   padding: 0 20 0 20;
 }
 
@@ -316,12 +316,25 @@
   background-color: #37b34f;
 }
 
+.box2{
+  position: relative;
+}
+
+.box2div{
+  position: absolute;
+  bottom: 10;
+}
+
 .box .p1{
   margin-bottom: 20px;
 }
 
 .box .p2{
   margin-bottom: 5;
+}
+
+.box .p3{
+  color: whitesmoke;
 }
 
 .email{
