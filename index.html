@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
  <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
@@ -21,10 +21,12 @@
         <div class="storename">GIRI KIRANA STORE</div>
       </a>
       <div class="buttons">
-        <button style="cursor: pointer;" class="bi"><img src="icons/hamburger menu.svg" alt="menu" height="15"></button>
+        <div class="button-bg">
+         <button style="cursor: pointer;" class="bi"><img src="icons/hamburger menu.svg" alt="menu" height="15"></button>
+        </div>
         <div class="dropdown-menu">
           <a href="https://www.google.com/maps/place/Giri+kirana+store/@27.7506287,85.3424447,807m/data=!3m1!1e3!4m6!3m5!1s0x39eb19003ea6e3b1:0xb57ce11fffb8ecc9!8m2!3d27.7506024!4d85.3454728!16s%2Fg%2F11y40v0gx8?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D">Find Us</a>
-          <a href="products.html">Our Products</a>
+          <a href="products.html">Products</a>
           <a href="#about-wrapper">About Us</a>
           <a href="#contact">Contact Us</a>
           <p>Opened between 5 am to 9 pm <br> (evey day)</p>
@@ -144,28 +146,36 @@
 
 
     <div id="contact" class="contact">
-      <p class="contact-title">Contact Us</p>
+      <p class="contact-title">Contact Us <span style="color: rgba(128, 128, 128, 0.283); font-size: 10; margin-left: 150;">Click to contact</span></p> 
+
 
       <div class="boxes">
-        <div class="box box1">
-          <p class="p1">LOK BAHADUR GIRI</p>
-          <P class="p2">Store Owner</P>
-          <p class="p3">+977 9818979934</p>
-        </div>
 
-        <div class="box box2">
-          <p class="p1">DURGA GIRI</p>
-          <P class="p2">Store Owner</P>
-          <p class="p3">+977 9818326360</p>
-        </div>
-      </div>
-
-      <div class="email">
-        <p class="p1">Send an Email at :</p>
-        <a  href="mailto:giridipak070@gmail.com">
-          <p class="p2">giridipak070@gmail.com</p>
+        <a style="color: #00000000;" href="tel:+977 9818979934">       
+          <div class="box box1">
+            <p class="p1">LOK BAHADUR GIRI</p>
+            <P class="p2">Store Owner</P>
+           <p class="p3">+977 9818979934</p>
+          </div>
         </a>
+   
+        <a style="color:#00000000;" href="tel:+977 9818326360">
+          <div class="box box2">
+            <p class="p1">DURGA GIRI</p>
+            <P class="p2">Store Owner</P>
+            <p class="p3">+977 9818326360</p>
+          </div>
+        </a>
+        
       </div>
+
+
+      <a style="color: #00000000;" href="mailto:giridipak070@gmail.com">
+        <div class="email">
+          <p class="p1">Send an Email at :</p>     
+          <p class="p2">giridipak070@gmail.com</p>
+        </div>
+      </a>
 
     </div>
    
@@ -185,8 +195,8 @@
 
     </div>
 
-    <script src="index.js"></script>
+    <script src="scripts/index.js"></script>
   </div> 
-  <div class="desktop-restricted">Sorry, this website is only available on mobile devices !</div>
+  <div class="desktop-restricted">Sorry, this website is only available on mobile devices </div>
 </body>
 </html>

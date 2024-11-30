@@ -26,7 +26,7 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.remove('show');
     }
   });
-}, { threshold: 0.3 }); 
+}, { threshold: 0.5 }); 
 
 wcuInfo.querySelectorAll('div').forEach(div => {
   observer.observe(div);
