@@ -27,7 +27,6 @@
   }
 }
 
-
 .header{
   display: flex;
   justify-content: space-between;
@@ -106,6 +105,8 @@
 .wrapper2{
   background: linear-gradient(109.6deg, #e9e1cd 11.2%, #a39d8e 78.9%);
   padding: 0px 15px 20px 15px;
+  min-height:calc(100vh - 55px);
+  position: relative;
 }
 
 .title{
@@ -169,6 +170,8 @@
 footer{
  margin-top: 25px;
  padding: 0 0 0 8;
+ position:absolute;
+ bottom: 25px;
 }
 
 footer p{
@@ -178,22 +181,10 @@ footer p{
 
 /* color accoriding to furit */
 
-.apple{
-  background: radial-gradient(circle at -1% 57.5%, rgb(92, 21, 21) 0%, rgb(126, 15, 15) 90%);
+.potato{
+  background: radial-gradient(circle at -1% 57.5%, rgb(147, 155, 36) 0%, rgb(149, 129, 27) 90%);
 }
 
-.banana{
-  background: radial-gradient(circle at -1% 57.5%, rgb(134, 132, 8) 0%, rgb(160, 167, 14) 90%);
-}
-
-.orange{
-  background: radial-gradient(circle at -1% 57.5%, rgb(255, 123, 0) 0%, rgb(174, 80, 7) 90%);
-}
-
-.aanar{
-  background: radial-gradient(circle at -1% 57.5%, rgb(118, 41, 41) 0%, rgb(139, 40, 40) 90%);
-}
-
-.papaya{
-  background: radial-gradient(circle at -1% 57.5%, rgb(174, 103, 37) 0%, rgb(205, 95, 12) 90%);
+.oninon{
+  background: radial-gradient(circle at -1% 57.5%, rgb(106, 7, 104) 0%, rgb(115, 4, 118) 90%);
 }
