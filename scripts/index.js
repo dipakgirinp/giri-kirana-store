@@ -1,19 +1,30 @@
 //menu button
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.querySelector(".bi");
+  const header = document.querySelector(".header");
   const dropdownMenu = document.querySelector(".dropdown-menu");
+  const menuLinks = document.querySelectorAll(".dropdown-menu a");
 
+  // Toggle the menu when the button is clicked
   menuButton.addEventListener("click", () => {
-      dropdownMenu.style.display = 
-          dropdownMenu.style.display === "block" ? "none" : "block";
+    header.classList.toggle("expanded");
   });
 
+  // Close the menu when clicking anywhere outside the menu
   document.addEventListener("click", (event) => {
-      if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-          dropdownMenu.style.display = "none";
-      }
+    if (!header.contains(event.target)) {
+      header.classList.remove("expanded");
+    }
+  });
+
+  // Close the menu when a menu option is clicked
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      header.classList.remove("expanded");
+    });
   });
 });
+
 
 //why choose us animation
 const wcuInfo = document.querySelector('.wcu-info'); 

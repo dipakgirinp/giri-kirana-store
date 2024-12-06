@@ -1,4 +1,5 @@
 *{
+  scroll-behavior: smooth;
   -webkit-tap-highlight-color: #00000000;
   margin: 0;
   font-family:Signika Negative, arial, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -104,8 +105,12 @@
 
 .wrapper2{
   background: linear-gradient(109.6deg, #e9e1cd 11.2%, #a39d8e 78.9%);
-  padding: 0px 15px 20px 15px;
   min-height:calc(100vh - 55px);
+  padding-bottom: 120px;
+}
+
+.wrapper3{
+  padding: 0px 15px 20px 15px;
 }
 
 .title{
@@ -117,7 +122,7 @@
 
 footer{
  margin-top: 25px;
- padding: 0 0 0 8;
+ padding: 0 0 0 19;
  bottom: 25px;
 }
 
@@ -130,20 +135,19 @@ table{
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.379);
   background-color: #edecec;
-  
 }
 
 thead{
-  background-color:rgb(29, 149, 29);
-  color: whitesmoke;
+  background: linear-gradient(to bottom, #326b32, #205222);
+  color: #FFFFFF;
 }
 
 td, th{
-  padding: 13;
+  padding: 15px;
   font-size: 1.2rem;
 }
 
@@ -156,8 +160,12 @@ tr{
   transition: all 0.15s;
 }
 
+tbody tr:nth-of-type(odd) {
+  background: #FAFAFA;
+}
+
 tbody tr:nth-of-type(even){
-  background: rgb(222, 220, 220);
+  background: #efeeee;
 }
 
 tbody tr:hover{
@@ -178,12 +186,33 @@ tbody tr:hover{
   align-items: center;
   justify-content: space-between;
   min-height:92.6667px;
-  margin-bottom: 8;
-  padding-right: 8;
+  margin-bottom: 20;
+  padding: 0 20 0 25;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.205);
 }
 
-/* go back */
+section {
+  padding: 15px;
+  border-radius: 10px;
+  color: #333333;
+  margin-bottom: 30;
+  scroll-margin-top: 60px;
+}
 
+section:last-of-type{
+  margin-bottom: 0;
+}
+
+.title2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* go back */
 .Btn {
   display: flex;
   align-items: center;
@@ -253,4 +282,57 @@ tbody tr:hover{
 /* button click effect*/
 .Btn:active {
   transform: translate(-2px, 0);
+}
+
+
+/* navigation bar */
+
+.bottomdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #326b32, #205222);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%; 
+  max-width: 500px; 
+  border-radius: 12px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.link{
+  padding: 12px 15px 12px 15px;
+  transition: 50ms;
+}
+
+.link:active{
+  background-color:rgba(0, 0, 0, 0.509);
+}
+
+.nav-item {
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: #141615;
+}
+
+.nav-icon {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 3px;
 }

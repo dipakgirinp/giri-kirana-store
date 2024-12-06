@@ -115,63 +115,82 @@
   color: #315231;
 }
 
-footer{
- margin-top: 25px;
- padding: 0 0 0 8;
- bottom: 25px;
+/* message */
+.message {
+  font-size: 18px;
+  color: #1e293b; 
+  background: linear-gradient(135deg, #d5f0e5, #9fa9a3); /* Light grey gradient for elegance */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
-footer p{
-  color: #515151;
+.main-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0f172a; 
+  margin:10px;
 }
 
+.sub-message {
+  font-size: 16px;
+  color: #4b5563; 
+  margin-top: 30px;
+}
 
-table{
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  border-radius: 5px;
+.sub-message strong {
+  color: #000000;
+}
+
+.buttondiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* From Uiverse.io */ 
+.visitbtn{
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
   overflow: hidden;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.21);
-  background-color: #edecec;
-  
-}
-
-thead{
-  background-color:rgb(29, 149, 29);
-  color: whitesmoke;
-}
-
-td, th{
-  padding: 13;
-  font-size: 1.2rem;
-}
-
-th{
-  letter-spacing: 1;
-}
-
-
-tr{
-  transition: all 0.15s;
-}
-
-tbody tr:nth-of-type(even){
-  background: rgb(222, 220, 220);
-}
-
-tbody tr:hover{
-  background: rgb(171, 228, 176);
-}
+ }
  
-.unit{
-  color: rgb(104, 98, 98);
-  font-size: 17;
-} 
-
-.name{
-  min-width:100px ;
-}
+ .visitbtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+ 
+ .visitbtn:hover {
+  color: #e8e8e8;
+ }
+ 
+ .visitbtn:hover::before {
+  width: 100%;
+ }
 
 .titlediv{
   display: flex;
@@ -182,8 +201,8 @@ tbody tr:hover{
   padding-right: 8;
 }
 
-/* go back */
 
+/* go back */
 .Btn {
   display: flex;
   align-items: center;
@@ -200,7 +219,6 @@ tbody tr:hover{
   background-color: rgb(46, 102, 42);
 }
 
-/* plus sign */
 .sign {
   width: 100%;
   transition-duration: .1s;
@@ -217,7 +235,6 @@ tbody tr:hover{
   fill: white;
 }
 
-/* text */
 .text {
   position: absolute;
   right: 0%;
@@ -229,7 +246,6 @@ tbody tr:hover{
   transition-duration: .1s;
 }
 
-/* hover effect on button width */
 .Btn:hover {
   width: 125px;
   border-radius: 40px;
@@ -242,7 +258,6 @@ tbody tr:hover{
   padding-left: 10px;
 }
 
-/* hover effect button's text */
 .Btn:hover .text {
   opacity: 1;
   width: 70%;
@@ -250,7 +265,6 @@ tbody tr:hover{
   padding-right: 10px;
 }
 
-/* button click effect*/
 .Btn:active {
   transform: translate(-2px, 0);
 }

@@ -28,20 +28,77 @@
   }
 }
 
-.header{
+/* ....... */
+
+/* Header Styling */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 55px;
-  padding: 0 12 0 12;
-	position: relative;
-	z-index: 10;
+  padding: 0 12px;
+  position: relative;
+  z-index: 10;
   background-color: #000;
-	box-shadow: 0px 0px 20px #000000da;
+  box-shadow: 0px 0px 20px #000000da;
   background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(43, 42, 42) 78.9%);
   position: sticky;
   top: 0;
 }
+
+.header.expanded {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Fullscreen Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 55px);
+  background: linear-gradient(109.6deg, rgb(27, 27, 27) 11.2%, rgb(43, 42, 42) 78.9%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.1s,  transform 0.5s, blur 0.5s ;
+  filter: blur(10px);
+}
+
+.header.expanded .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu a {
+  padding: 15px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu p {
+  margin-top: auto;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  text-align: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* ...... */
 
 .bi{
   background: none;
@@ -382,40 +439,6 @@
 
 .buttons {
   position: relative;
-}
-
-
-.dropdown-menu {  
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: -3;
-  background-color: #333;
-  border-radius: 10px;
-  box-shadow: 0 0px 20px rgb(0, 0, 0);
-  z-index: 1000;
-  width: 150px;
-  overflow: hidden;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 10px ;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.dropdown-menu p{
-  color: rgb(247, 242, 242);
-  background-color: #0bc35e;
-  padding: 5 0 5 10;
-  
-}
-
-.dropdown-menu a:hover {
-  background-color: #555;
 }
 
 .bi {
