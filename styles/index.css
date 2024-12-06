@@ -67,17 +67,19 @@
   transform: translateY(-10px);
   transition: opacity 0.1s,  transform 0.5s, blur 0.5s ;
   filter: blur(10px);
+  pointer-events: none; 
 }
 
 .header.expanded .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
+  pointer-events: auto;
 }
 
 /* Dropdown Menu Items */
 .dropdown-menu a {
-  padding: 15px 0;
+  padding: 15px ;
   color: white;
   text-decoration: none;
   font-size: 18px;
