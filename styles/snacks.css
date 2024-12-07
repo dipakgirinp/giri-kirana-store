@@ -11,23 +11,6 @@
   box-sizing: border-box;
 }
 
-.desktop-restricted{
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .wrapper{
-    display: none;
-  }
-  .desktop-restricted {
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    color: red;
-    margin-top: 200px;
-  }
-}
-
 .header{
   display: flex;
   justify-content: space-between;
