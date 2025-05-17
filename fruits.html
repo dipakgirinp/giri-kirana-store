@@ -15,7 +15,7 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper" id="mobile-content">
 
 
     <header class="header">
@@ -139,5 +139,83 @@
     </div>
     <script src="scripts/fruits.js"></script>
   </div>
+
+  <style>
+     .message-container {
+      text-align: center;
+      padding: 40px;
+      max-width: 500px;
+      background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+      border-radius: 20px;
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .message-container h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .message-container p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #cccccc;
+    }
+
+    .message-container .icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #pc{
+      display: none;
+      background-color: #1f1f1f;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+   }
+
+   
+#mobile-content{
+  display: none;
+}
+
+</style>
+
+    <div id="pc">
+     <div class="message-container" id="desktop-message">
+      <div class="icon">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 2C6.44772 2 6 2.44772 6 3V21C6 21.5523 6.44772 22 7 22H17C17.5523 22 18 21.5523 18 21V3C18 2.44772 17.5523 2 17 2H7ZM12 20C11.4477 20 11 19.5523 11 19C11 18.4477 11.4477 18 12 18C12.5523 18 13 18.4477 13 19C13 19.5523 12.5523 20 12 20ZM8 4H16V16H8V4Z"/>
+        </svg>
+      </div>
+      <h1>Mobile Experience Only</h1>
+      <p>This site is optimized for mobile devices. For the best viewing experience, please open this website on your phone or tablet.</p>
+      <p style="margin-top: 20px; color: #3e3e3e; letter-spacing: 2px;">Giri Kirana Store</p>
+     </div>
+    </div>
+
+
+    <script src="scripts/vegetables.js"></script>
+
+     <script>
+       if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+         document.getElementById("mobile-content").style.display = "block";
+       } else {
+         document.getElementById("pc").style.display = "flex";
+       }
+     </script>
 </body>
 </html>
